@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(gtpsp_native LANGUAGES CXX)
+add_library(gtpsp_native SHARED native-lib.cpp)
+find_library(log-lib log)
+target_link_libraries(gtpsp_native ${log-lib})
